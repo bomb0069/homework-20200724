@@ -1,13 +1,22 @@
 *** Keywords ***
-สร้าง qr code ใน qifi.org
-    ค้นหา
+ทดสอบ qifi ใน Google Chrome
+    [Arguments]    ${SSID}    ${PASSWORD}
+    ใส่ข้อความ SSID    ${SSID}
+    ใส่ข้อความ password    ${PASSWORD}
     กดปุ่ม generate!
     รอจนแสดง qr code
     ปิด browser
 
-กรอกค่า 2 ค่า
-    Input Text    ssid    chutimon
-    Input Text    key    125259
+เปิด https://qifi.org/ ใน Chrome ขึ้นมา
+    Open Browser    ${URL}    chrome
+
+ใส่ข้อความ SSID
+    [Arguments]    ${SSID}
+    Input Text    ssid    ${SSID}
+
+ใส่ข้อความ password
+    [Arguments]    ${PASSWORD}
+    Input Text    key    ${PASSWORD}
 
 กดปุ่ม generate!
     Click Button    generate

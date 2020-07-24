@@ -1,27 +1,13 @@
 *** Settings ***
+Resource    keywords.robot
 Library    SeleniumLibrary
+Test Setup    เปิด https://qifi.org/ ใน Chrome ขึ้นมา
+Test Template    ทดสอบ qifi ใน Google Chrome
+Test Teardown   ปิด Browser
 
-*** Test Case ***
-สร้าง qr code ใน qifi.org
-    เปิด qifi.org ขึ้นมา
-    กรอกค่า 2 ค่า
-    กดปุ่ม generate!
-    รอจนแสดง qr code
-    ปิด browser
+*** Variable ***
+${URL}    https://qifi.org/
 
-*** Keywords ***
-เปิด qifi.org ขึ้นมา
-    Open Browser    https://qifi.org/    chrome
-
-กรอกค่า 2 ค่า
-    Input Text    ssid    chutimon
-    Input Text    key    125259
-
-กดปุ่ม generate!
-    Click Button    generate
-
-รอจนแสดง qr code
-    Wait Until Page Contains Element    id=qrcode   limit=1
-
-ปิด browser
-    Close Browser
+*** Test Cases ***                       SSID        PASSWORD
+ทดสอบ qifi chutimon ใน Google Chrome    chutimon    654321
+ทดสอบ qifi mind ใน Google Chrome       mind       123456 
