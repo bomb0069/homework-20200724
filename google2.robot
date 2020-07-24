@@ -1,5 +1,5 @@
 *** Settings ***
-Resource    keywords.robot
+Resource    google2-keywords.robot
 Library    SeleniumLibrary
 Test Setup    เปิดโครมเข้าไปที่ www.google.co.th
 Test Template    ค้นหาเปิด Google Chrome 
