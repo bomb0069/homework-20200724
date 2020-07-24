@@ -10,7 +10,7 @@ Qifi
     Open Browser    ${URL}    chrome
 กรอกช่อง ssid ด้วย 1111
     [Arguments]    ${INPUT_TEXT_SSID}
-    Input Text    ssid    {INPUT_TEXT_SSID}
+    Input Text    ssid    ${INPUT_TEXT_SSID}
 กรอกช่องkeyด้วย2222
     [Arguments]    ${INPUT_TEXT_KEY}
     Input Text    key    ${INPUT_TEXT_KEY}
