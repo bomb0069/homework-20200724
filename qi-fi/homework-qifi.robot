@@ -5,7 +5,7 @@ Test Template    ทดสอบการ Generate QR code สำหรับเ
 Test Teardown    ปิด Browser
 
 
-*** Test Cases ***
+*** Test Cases ***                                    WIFI_ID       WIFI_PASSWORD
 ทดสอบการ Generate QR code สำหรับเข้า Wi-fi : wattana    wattana-wifi    5555
     
    
