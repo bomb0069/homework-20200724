@@ -16,4 +16,3 @@ jobs:
         env:
           BROWSER: chrome
           ROBOT_TESTS_DIR: ${{ github.workspace }}/google
-          ROBOT_REPORTS_DIR: ${{ github.workspace }}/reports
